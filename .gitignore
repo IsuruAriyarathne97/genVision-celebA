@@ -1,0 +1,25 @@
+# Ignore image files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.webp
+
+# Ignore zip files
+*.zip
+
+# Optional: Ignore all images in subfolders
+**/*.jpg
+**/*.jpeg
+**/*.png
+**/*.gif
+**/*.bmp
+**/*.tiff
+**/*.webp
+
+# Optional: Ignore any folder that contains image or zip files
+# For example, ignore entire image dataset folders
+celebA/
+gen-env/
