@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: diffusion
+spec:
+  containers:
+    - name: python
+      image: ghcr.io/astral-sh/uv:python3.12-bookworm-slim
+      resources:
+        requests:
+          memory: 20Gi
+          cpu: 4
+        limits:
+          memory: 20Gi
+          cpu: 4
+      command: ["/bin/bash", "-c", "sleep infinity"]
+      volumeMounts:
+        - name: home
+          mountPath: "/sciclone/home/sczupka"
+  volumes:
+    - name: home
+      nfs:
+        server: 128.239.56.166
+        path: /sciclone/home/sczupka
