@@ -15,8 +15,8 @@ timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
 # )
 
 pm.execute_notebook(
-    'celebA-GAN.ipynb',  # Path to the input notebook
-    f'scripts/celebA-GAN-{timestamp}.ipynb'        # Path to the output notebook
+    'celebA-WGAN.ipynb',  # Path to the input notebook
+    f'scripts/celebA-WGAN-{timestamp}.ipynb'        # Path to the output notebook
 )
 
 
