@@ -1,0 +1,14 @@
+Job ID: 55993
+Node:  as01
+Start: Tue May 13 04:00:02 PM EDT 2025
+Number of GPUs: 2
+Using device: cuda
+Loaded model from ../chkpts/vqvae_step20000.pt
+Generating reconstruction examples...
+Saved comparison grid to evaluation_results/reconstruction_grid.png
+PSNR on sample batch: 30.99 dB
+MSE on sample batch: 0.0009
+Generated 64 samples
+Preparing images for FID calculation...
+Calculating FID score using 5000 images...
+FID score: 25.05
