@@ -6,6 +6,7 @@
 #SBATCH -n 1                   # Number of tasks/cores per node
 # SBATCH --gres=gpu:1           # Request 1 GPU
 #SBATCH -t 48:00:00            # Runtime in hh:mm:ss
+#SBATCH --gpus=1
 #SBATCH --mem=80G
 
 # Run your Python script

@@ -19,6 +19,11 @@ pm.execute_notebook(
     f'scripts/celebA-GAN-{timestamp}.ipynb'        # Path to the output notebook
 )
 
+# pm.execute_notebook(
+#     'celebA-BiGAN.ipynb',  # Path to the input notebook
+#     f'scripts/celebA-BiGAN-{timestamp}.ipynb'        # Path to the output notebook
+# )
+
 
 # pm.execute_notebook(
 #     'celebA-NGAN.ipynb',  # Path to the input notebook

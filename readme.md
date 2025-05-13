@@ -23,8 +23,7 @@ pip install -r requirements.txt
 │   └── celeba                 # Actual CelebA dataset location
 ├── celebA-GAN.ipynb           # GAN notebook
 ├── celebA-vAE.ipynb           # Variational Autoencoder notebook
-├── evaluators                 # Evaluation notebooks
-│   ├── classifier.ipynb
+├── evaluators                 # Evaluation notebook
 │   ├── fid.ipynb
 │   └── t-SNE.ipynb
 ├── logs                       # Runtime logs and outputs
@@ -44,7 +43,6 @@ pip install -r requirements.txt
 ## Evaluation
 
 Evaluate the quality of generated images using the notebooks in the `evaluators/` directory:
-- `classifier.ipynb` – Accuracy of image classification
 - `fid.ipynb` – Frechet Inception Distance
 - `t-SNE.ipynb` – t-SNE projection for visual inspection
 
