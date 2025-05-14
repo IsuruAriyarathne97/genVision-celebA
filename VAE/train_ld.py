@@ -10,6 +10,9 @@ import matplotlib.pyplot as plt
 from datetime import datetime
 import numpy as np
 
+
+## THIS MODEL IS NOT USED, DID NOT WORK, EPIC FAIL. WENT TOO DEEP.  
+
 def cosine_beta_schedule(timesteps):
     steps = torch.linspace(0, timesteps, timesteps + 1)
     f = torch.cos((steps / timesteps) * math.pi / 2) ** 2
