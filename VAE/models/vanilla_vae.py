@@ -160,9 +160,10 @@ def train(args):
         print(f"Epoch {epoch}/{args.epochs} | recon: {epoch_recon / n:.4f} | kl: {epoch_kl / n:.4f} | time: {time.time() - t0:.1f}s")
 
         # Save checkpoint and samples every epoch
-        ckpt_path = Path(args.out_dir) / f"vae_epoch_{epoch:03d}.pt"
-        torch.save({"epoch": epoch, "state_dict": model.state_dict()}, ckpt_path)
-        save_samples(model, epoch, Path(args.out_dir), device)
+        if epoch % args.chkpt_freq == 0 or epoch == 1:
+            ckpt_path = Path(args.out_dir) / f"vae_epoch_{epoch:03d}.pt"
+            torch.save({"epoch": epoch, "state_dict": model.state_dict()}, ckpt_path)
+            save_samples(model, epoch, Path(args.out_dir), device)
     plt.figure(figsize=(10, 6))
     epochs = range(1, args.epochs + 1)
     plt.plot(epochs, recon_losses, label='Reconstruction Loss')
@@ -191,9 +192,11 @@ def parse_args():
     p.add_argument("--latent", type=int, default=256)
     p.add_argument("--beta", type=float, default=5.0, help="KL weight")
     p.add_argument("--loss_function",type=str,default="mse")
+    p.add_argument("--chkpt_freq",type=int,default=25)
     return p.parse_args()
 
 
 if __name__ == "__main__":
     args = parse_args()
+    print(args)
     train(args)
